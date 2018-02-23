@@ -1,6 +1,6 @@
 <template>
   <div class="form">
-    <input type="checkbox" class="checkbox" :id="id" :checked="copyValue" @click.stop="updateValue"/>
+    <input type="checkbox" class="checkbox" :id="id" :checked="value" @click.stop="updateValue"/>
     <label :for="id" :style="{'--d': size + 'px'}">
       <svg viewBox="0,0,50,50">
         <path d="M5 30 L 20 45 L 45 5"></path>
@@ -18,13 +18,12 @@
     },
     data () {
       return {
-        copyValue: this.value ? true : false,
-        id: Math.random().toString(64).substr(2)
+        id: Math.random().toString(36).substr(2)
       }
     },
     methods: {
       updateValue () {
-        this.copyValue = !this.copyValue
+        this.copyValue = !this.value
         this.$emit('input', this.copyValue)
       }
     }
@@ -42,7 +41,14 @@
   input:focus + label {
     transform: scale(1.03);
   }
-
+  label {
+    position: relative;
+  }
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
   .checkbox + label {
     display: block;
     border: 2px solid #333;
@@ -54,7 +60,7 @@
   }
   .checkbox + label:active {
     transform: scale(1.05);
-    border-radius: 30px;
+    border-radius: 10px;
   }
   .checkbox + label svg {
     pointer-events: none;
