@@ -12,16 +12,16 @@ $ npm install --save check-puge
 
 ```vue
 <template>
-  CheckBox(v-model="checkValue", :size="12")
+  <CheckBox v-model="checkValue" :size="12">
 </template>
 
 <script>
-import CheckBox from 'check-puge'
-export default {
-  components: {
-    CheckBox
+  import CheckBox from 'check-puge'
+  export default {
+    components: {
+      CheckBox
+    }
   }
-}
 </script>
 ```
 

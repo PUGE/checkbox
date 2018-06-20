@@ -23,8 +23,7 @@
     },
     methods: {
       updateValue () {
-        this.copyValue = !this.value
-        this.$emit('input', this.copyValue)
+        this.$emit('input', !this.value)
       }
     }
   }
