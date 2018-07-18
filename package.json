@@ -1,6 +1,6 @@
 {
   "name": "check-puge",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "SVG动画选择框",
   "author": "PUGE <my@owo.help>",
   "main": "./index.js",

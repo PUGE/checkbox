@@ -1,6 +1,6 @@
 <template>
   <div class="form">
-    <input type="checkbox" class="checkbox" :id="id" :checked="value" @click.stop="updateValue"/>
+    <input type="checkbox" class="checkbox" :id="id" v-model="value" @click.stop="updateValue"/>
     <label :for="id" :style="{'--d': size + 'px'}">
       <svg viewBox="0,0,50,50">
         <path d="M5 30 L 20 45 L 45 5"></path>
