@@ -53,6 +53,7 @@
     transform: scale(1.03);
   }
   label {
+    margin: auto;
     position: relative;
   }
   svg {
