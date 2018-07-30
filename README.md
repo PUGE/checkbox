@@ -45,6 +45,16 @@ $ npm install --save check-puge
 
 选择框大小.
 
+#### borderWidth
+类型: `Number`<br>
+必要性: `false`<br>
+默认值: `1`
+
+#### borderColor
+类型: `String`<br>
+必要性: `false`<br>
+默认值: `#333333`
+
 ```html
 <CheckBox :size="18">
 ```

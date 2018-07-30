@@ -1,7 +1,7 @@
 <template>
   <div class="form">
     <input type="checkbox" class="checkbox" :id="id" v-model="value" @click.stop="updateValue"/>
-    <label :for="id" :style="{'--d': size + 'px'}">
+    <label :for="id" :style="checkboxStyle">
       <svg viewBox="0,0,50,50">
         <path d="M5 30 L 20 45 L 45 5"></path>
       </svg>
@@ -14,11 +14,23 @@
     name: 'checkbox',
     props: {
       size: Number,
-      value: Boolean
+      value: Boolean,
+      borderWidth: {
+        type: Number,
+        default: 2
+      },
+      borderColor: {
+        type: String,
+        default: '#333333'
+      }
     },
     data () {
       return {
-        id: Math.random().toString(36).substr(2)
+        id: Math.random().toString(36).substr(2),
+        checkboxStyle: {
+          'border': `${this.borderWidth}px solid ${this.borderColor}`,
+          '--d': this.size + 'px'
+        }
       }
     },
     methods: {
@@ -50,7 +62,6 @@
   }
   .checkbox + label {
     display: block;
-    border: 2px solid #333;
     width: var(--d);
     height: var(--d);
     border-radius: 4px;
