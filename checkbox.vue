@@ -2,7 +2,7 @@
   <div class="form">
     <input type="checkbox" class="checkbox" :checked="value" :id="id" @input="updateValue"/>
     <label :for="id" :style="checkboxStyle">
-      <svg viewBox="0,0,50,50">
+      <svg viewBox="0,0,50,50" :fill="color">
         <path d="M5 30 L 20 45 L 45 5"></path>
       </svg>
     </label>
@@ -18,6 +18,10 @@
       borderWidth: {
         type: Number,
         default: 2
+      },
+      color: {
+        type: String,
+        default: '#333333'
       },
       borderColor: {
         type: String,
