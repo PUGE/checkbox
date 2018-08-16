@@ -1,8 +1,8 @@
 <template>
   <div class="form">
     <input type="checkbox" class="checkbox" :checked="value" :id="id" @input="updateValue"/>
-    <label :for="id" :style="checkboxStyle">
-      <svg viewBox="0,0,50,50" :fill="color">
+    <label :for="id" :style="checkboxStyle" :class="{active: value}">
+      <svg viewBox="0,0,50,50">
         <path d="M5 30 L 20 45 L 45 5"></path>
       </svg>
     </label>
@@ -17,15 +17,11 @@
       value: Boolean,
       borderWidth: {
         type: Number,
-        default: 2
-      },
-      color: {
-        type: String,
-        default: '#333333'
+        default: 1
       },
       borderColor: {
         type: String,
-        default: '#333333'
+        default: '#E9E9E9'
       }
     },
     data () {
@@ -64,6 +60,12 @@
     position: absolute;
     left: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .active {
+    background-color: #219AF2;
   }
   .checkbox + label {
     display: block;
@@ -71,6 +73,7 @@
     height: var(--d);
     border-radius: 4px;
     cursor: pointer;
+    padding: 2px;
     transition: all .2s ease;
   }
   .checkbox + label:active {
@@ -82,8 +85,8 @@
   }
   .checkbox + label svg path {
     fill: none;
-    stroke: #333;
-    stroke-width: 4px;
+    stroke: white;
+    stroke-width: 8px;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-dasharray: 100;
