@@ -42,6 +42,9 @@
 </script>
 
 <style scoped>
+  .form {
+    display: inline-block;
+  }
   input {
     position: absolute;
     opacity: 0;
