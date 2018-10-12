@@ -1,5 +1,5 @@
 {
-  "name": "check-puge",
+  "name": "@puge/checkbox",
   "version": "1.1.6",
   "description": "SVG动画选择框",
   "author": "PUGE <my@owo.help>",

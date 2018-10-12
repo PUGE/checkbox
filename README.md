@@ -5,7 +5,7 @@
 ## 安装 及 使用
 
 ```bash
-$ npm install --save check-puge
+$ npm install --save @puge/checkbox
 ```
 
 使用组件
@@ -16,7 +16,7 @@ $ npm install --save check-puge
 </template>
 
 <script>
-  import CheckBox from 'check-puge'
+  import CheckBox from '@puge/checkbox'
   export default {
     components: {
       CheckBox

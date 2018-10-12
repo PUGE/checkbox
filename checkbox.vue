@@ -43,7 +43,8 @@
 
 <style scoped>
   .form {
-    display: inline-block;
+    margin: 0 auto;
+    display: block;
   }
   input {
     position: absolute;
