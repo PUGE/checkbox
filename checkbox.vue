@@ -2,7 +2,7 @@
   <div class="form">
     <input type="checkbox" class="checkbox" :checked="value" :id="id" @input="updateValue"/>
     <label :for="id" :style="checkboxStyle" :class="{active: value}">
-      <svg viewBox="0,0,50,50">
+      <svg viewBox="0,0,50,50" :style="{margin: margin + 'px'}">
         <path d="M5 30 L 20 45 L 45 5"></path>
       </svg>
     </label>
@@ -15,6 +15,10 @@
     props: {
       size: Number,
       value: Boolean,
+      margin: {
+        type: Number,
+        default: 1
+      },
       borderWidth: {
         type: Number,
         default: 1

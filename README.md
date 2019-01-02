@@ -45,6 +45,13 @@ $ npm install --save @puge/checkbox
 
 选择框大小.
 
+#### margin
+类型: `Number`<br>
+必要性: `false`<br>
+默认值: `1`
+
+选择框大小.
+
 #### borderWidth
 类型: `Number`<br>
 必要性: `false`<br>
